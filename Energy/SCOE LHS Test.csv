@@ -1,0 +1,5 @@
+﻿strategy_id,variable,scalar_min,scalar_max,notes
+3025,cost_scalar,0.5,1.5,Arbitrary range
+3027,cost_scalar,0.5,1.5,Arbitrary range
+3029,cost_scalar,0.5,1.5,Arbitrary range
+3029,effect_scalar,0.5,1,Arbitrary range

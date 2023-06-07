@@ -1,0 +1,25 @@
+Policy_ID,Policy_name,rice_management,Improve_Crop_Productivity,Improve_lvst_Productivity,new_diets,enteric_fermentation,conservation_aggriculture,reducing_food_losses,manure_management,silvopasture,rehabilitating_land,reduce_excess_fertilizer,improve_fertilizer_app,deforestation,Improve_Crop_Productivity_wlugains,Improve_lvst_Productivity_wlugains,new_diets_wlugains,reducing_food_losses_wlugains,silvopasture_wlugains,none_wlugains
+0,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+1,rice_manegement,full,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+2,Improve_Crop_Productivity,none,full,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+3,Improve_lvst_Productivity,none,none,full,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+4,new_diets,none,none,none,full,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+5,enteric_fermentation,none,none,none,none,full,none,none,none,none,none,none,none,none,none,none,none,none,none,none
+6,conservation_aggriculture,none,none,none,none,none,full,none,none,none,none,none,none,none,none,none,none,none,none,none
+7,reducing_food_losses,none,none,none,none,none,none,full,none,none,none,none,none,none,none,none,none,none,none,none
+8,manure_management,none,none,none,none,none,none,none,full,none,none,none,none,none,none,none,none,none,none,none
+9,silvopasture,none,none,none,none,none,none,none,none,full,none,none,none,none,none,none,none,none,none,none
+10,rehabilitating_land,none,none,none,none,none,none,none,none,none,full,none,none,none,none,none,none,none,none,none
+11,reduce_excess_fertilizer,none,none,none,none,none,none,none,none,none,none,full,none,none,none,none,none,none,none,none
+12,improve_fertilizer_app,none,none,none,none,none,none,none,none,none,none,none,full,none,none,none,none,none,none,none
+14,deforestation,none,none,none,none,none,none,none,none,none,none,none,none,full,none,none,none,none,none,none
+15,Improve_Crop_Productivity_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,full,none,none,none,none,none
+16,Improve_lvst_Productivity_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,none,full,none,none,none,none
+17,new_diets_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,full,none,none,none
+18,reducing_food_losses_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,full,none,none
+19,silvopasture_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,full,none
+20,none_wlugains,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,none,full
+21,full ,full,none,none,none,full,full,none,full,none,full,full,full,full,none,none,none,none,none,none
+22,full_wlugains,full,none,none,none,full,full,none,none,none,full,full,full,full,full,full,full,full,full,none
+23,improve_agrc_lvst_mgmt,full,none,none,none,full,full,none,full,none,none,full,full,none,none,none,none,none,none,none
+24,improve_mgmt_no_deforestation,full,none,none,none,full,full,none,full,none,none,full,full,full,none,none,none,none,none,none

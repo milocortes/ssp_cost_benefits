@@ -1,0 +1,9 @@
+﻿land_use_type,ecosystem_value_per_ha_yr,timber_value_per_ha_per_yr
+area_lndu_croplands,0,0
+area_lndu_forests_mangroves,10000,0
+area_lndu_forests_primary,5000,36
+area_lndu_forests_secondary,2500,36
+area_lndu_grasslands,0,0
+area_lndu_other,0,0
+area_lndu_settlements,0,0
+area_lndu_wetlands,10000,0
