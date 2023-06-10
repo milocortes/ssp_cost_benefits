@@ -1,0 +1,33 @@
+strategy_code,strategy,comparison_code,include,strategy_specific_costs,entc_enfu_production_cost_calculation,entc_air_pollution_cost_calculation,trns_air_pollution_cost_calculation,trns_congestion_cost_calculation,trns_road_safety_cost_calculation,trns_passenger_transport_cost_calculation,trns_freight_transport_cost_calculation,inen_air_pollution_cost_calculation,ghg_effects_calculation
+TRNS:ALL,TRNS: All Transportation transformations,BASE,0,0,0,,0,,,,,,0
+TRNS:ALL_REP,TRNS: All Transportation transformations with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_DEMAND_MANAGEMENT,TRNS: Demand management bundle,BASE,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_DEMAND_MANAGEMENT_REP,TRNS: Demand management bundle with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS_BUNDLE_EFFICIENCY,TRNS: Efficiency bundle,BASE,0,0,0,,0,,,,,,0
+TRNS_BUNDLE_EFFICIENCY_REP,TRNS: Efficiency bundle with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:FUEL_SWITCH_LIGHT_DUTY,TRNS: Electrify light duty road transport,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:FUEL_SWITCH_LIGHT_DUTY_REP,TRNS: Electrify light duty road transport with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:FUEL_SWITCH_RAIL,TRNS: Electrify rail,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:FUEL_SWITCH_RAIL_REP,TRNS: Electrify rail with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_FUEL_SWITCH,TRNS: Fuel switch bundle,BASE,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_FUEL_SWITCH_REP,TRNS: Fuel switch bundle with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:FUEL_SWITCH_MARITIME,TRNS: Fuel switch maritime,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:FUEL_SWITCH_MARITIME_REP,TRNS: Fuel switch maritime with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:FUEL_SWITCH_MEDIUM_DUTY,TRNS: Fuel switch medium duty road transport,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:FUEL_SWITCH_MEDIUM_DUTY_REP,TRNS: Fuel switch medium duty road transport with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:INC_OCCUPANCY,TRNS: Increase occupancy for private vehicles,BASE,1,1,1,1,1,1,1,1,0,0,1
+TRNS:INC_OCCUPANCY_REP,TRNS: Increase occupancy for private vehicles with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:INC_EFFICIENCY_ELEC,TRNS: Increase transportation electricity energy efficiency,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:INC_EFFICIENCY_ELEC_REP,TRNS: Increase transportation electricity energy efficiency with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:INC_EFFICIENCY_NON_ELEC,TRNS: Increase transportation non-electricity energy efficiency,BASE,1,1,1,1,1,0,0,0,0,0,1
+TRNS:INC_EFFICIENCY_NON_ELEC_REP,TRNS: Increase transportation non-electricity energy efficiency with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_MODE_SHIFT,TRNS: Mode shift bundle,BASE,0,0,0,,0,,,,,,0
+TRNS:BUNDLE_MODE_SHIFT_REP,TRNS: Mode shift bundle with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:MODE_SHIFT_FREIGHT,TRNS: Mode shift freight,BASE,1,0,1,1,1,1,1,0,1,0,1
+TRNS:MODE_SHIFT_FREIGHT_REP,TRNS: Mode shift freight with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:MODE_SHIFT_PASSENGER,TRNS: Mode shift passenger vehicles to others,BASE,1,0,1,1,1,1,1,1,0,0,1
+TRNS:MODE_SHIFT_PASSENGER_REP,TRNS: Mode shift passenger vehicles to others with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:MODE_SHIFT_REGIONAL,TRNS: Mode shift regional passenger travel,BASE,1,0,1,1,1,1,1,1,0,0,1
+TRNS:MODE_SHIFT_REGIONAL_REP,TRNS: Mode shift regional passenger travel with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0
+TRNS:DEC_DEMAND,TRNS: Reduce demand for transport,BASE,1,0,1,1,1,1,1,1,1,0,1
+TRNS:DEC_DEMAND_REP,TRNS: Reduce demand for transport with renewable energy production,ENTC:RENEWABLE_ELEC_TARGET,0,0,0,,0,,,,,,0

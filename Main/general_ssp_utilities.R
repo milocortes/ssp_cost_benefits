@@ -1,8 +1,8 @@
 #General Si-SePuede Utilities
 
-ssp_merge_run_attributes<-function(){
-  primary_attributes<-read.csv("ATTRIBUTE_PRIMARY.csv")
-  strategy_attributes<-read.csv("ATTRIBUTE_STRATEGY.csv")
+ssp_merge_run_attributes<-function(primary_filename, attribute_filename){
+  primary_attributes<-read.csv(primary_filename)
+  strategy_attributes<-read.csv(attribute_filename)
   merged_attributes<-merge(primary_attributes, strategy_attributes, by="strategy_id", all.x=TRUE)
   return(merged_attributes)
 }
@@ -79,7 +79,7 @@ ssp_calculate_average_decay_term<-function(time_periods, fraction_of_initial){
 #energy_consumption_inen_cement
 #marginal_fuel_cost
 ssp_spot_check_inen<-function(data, strategy, variable){
-  a<-data[data$region=='brazil' & data$time_period==35 & data$strategy_id==strategy & data$variable==variable,]
+  a<-data[data$region=='brazil' & data$time_period==35 & data$strategy_code==strategy & data$variable==variable,]
   return(a)
 }
     

@@ -1,0 +1,4 @@
+difference_variable,multiplier,multiplier unit,annual change,output_variable_name,output_display_name,sum,natural multiplier units,display_notes,internal_notes
+nemomod_entc_discounted_capital*,1,N/A,1,entc_capex,Electricity production (CapEx),1,N/A,Costs of electricity and fuels are endogenously calcuated in NemoMod,none
+nemomod_entc_discounted_operating*,1,N/A,1,entc_opex,Electricity production (OpEx),1,N/A,Costs of electricity and fuels are endogenously calcuated in NemoMod,none
+totalvalue_enfu_fuel_consumed_*,1,N/A,1,enfu_fuel_cost,Fuel Cost,1,N/A,Costs of electricity and fuels are endogenously calcuated in NemoMod,none
