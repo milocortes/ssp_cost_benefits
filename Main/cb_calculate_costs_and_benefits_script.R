@@ -13,7 +13,7 @@ primary_filename<-'~/Desktop/LAC Energy Tableaus/ATTRIBUTE_PRIMARY.csv' #path to
 strategy_filename<-'~/Desktop/LAC Energy Tableaus/ATTRIBUTE_STRATEGY.csv' #path to model output strategy filename
 cb_main_definitions_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/cost_benefit_definitions_main.csv' #path to the main cost benefit definitions file
 cb_strategy_specific_definitions_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/cost_benefit_definitions_strategy_specific.csv' #path to strategy-specific file
-cb_output_filename<-'~/Desktop/LAC Energy Tableaus/CB_summary_energy_results.csv'
+cb_output_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits//CB_summary_energy_results.csv'
 
 #-------------SOURCE LIBRARIES AND CODE-----
 source('cb_config.R')
@@ -49,9 +49,10 @@ data<-data_cleaned
 #-------------CALCULATE COSTS AND BENEFITS----------
 #read the definition
 #run the code
-#note to self -- how will we keep track of the definitions that are in cost factor files?
+#NIDHI: note to self -- how will we keep track of the definitions that are in cost factor files?
 #want to add the following information to each row? output_variable_name	output_display_name	natural.multiplier.units	display_notes	internal_notes
-
+#NIDHI: figure out how to commit
+#
 cb_main_definitions<-read.csv(cb_main_definitions_filename)
 cb_strategy_specific_definitions<-read.csv(cb_strategy_specific_definitions_filename)
 
@@ -61,8 +62,6 @@ results<-calculate_costs_and_benefits(data,
                                       ,
                                       cb_strategy_specific_definitions)
 
-#NIDHI LEFT OFF WHERE OUTPUT_MULTS is giving some weird buggy error
-#the thing to do is to call cb_long manually to test
 end_time <- Sys.time()
 runtime<-(end_time - start_time)
 
@@ -74,8 +73,7 @@ runtime<-(end_time - start_time)
 
 
 #-------------WRITE THE RESULTS---------------------
-#output
-#write the updated definitions file
+write.csv(results, file=cb_output_filename)
 
 
 
