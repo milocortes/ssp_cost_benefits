@@ -5,15 +5,13 @@
 #------------SET WORKING DIRECTORY----------
 setwd('~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/Main/')
 
-
-
 #-------------PATHS to KEY FILES-----------
 data_filename<-'~/Desktop/LAC Energy Tableaus/summary_energy_results.csv' #path to model output runs
 primary_filename<-'~/Desktop/LAC Energy Tableaus/ATTRIBUTE_PRIMARY.csv' #path to model output primary filename
 strategy_filename<-'~/Desktop/LAC Energy Tableaus/ATTRIBUTE_STRATEGY.csv' #path to model output strategy filename
 cb_main_definitions_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/cost_benefit_definitions_main.csv' #path to the main cost benefit definitions file
 cb_strategy_specific_definitions_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/cost_benefit_definitions_strategy_specific.csv' #path to strategy-specific file
-cb_output_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits//CB_summary_energy_results.csv'
+cb_output_filename<-'~/Desktop/LAC_Decarb_Git/ssp_cost_benefits/cost_benefit_results.csv'
 
 #-------------SOURCE LIBRARIES AND CODE-----
 source('cb_config.R')
@@ -58,7 +56,7 @@ cb_strategy_specific_definitions<-read.csv(cb_strategy_specific_definitions_file
 
 start_time <- Sys.time()
 results<-calculate_costs_and_benefits(data, 
-                                      #cb_main_definitions[cb_main_definitions$strategy=='TRNS: Electrify light duty road transport',]
+                                      cb_main_definitions[cb_main_definitions$strategy=='TRNS: Electrify light duty road transport',]
                                       ,
                                       cb_strategy_specific_definitions)
 
