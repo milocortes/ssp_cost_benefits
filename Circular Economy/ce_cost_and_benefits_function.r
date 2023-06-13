@@ -1,9 +1,7 @@
 #read file
-#data.dir <- r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Output\)"
-#data.dir <- r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Output\)"
+root <-  r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\ssp_cost_benefits\ssp_cost_benefits\Circular Economy\)"
+
 data.dir <- r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\outputs\)"
-#file.name <- r"(output_waste_all_2022_05_22.csv)"
-#file.name <- r"(output_waste_all.csv)"
 file.name <- r"(output_waste_all_2022_05_24.csv)"
 
 #Read file
@@ -11,9 +9,6 @@ data<-read.csv(paste0(data.dir,file.name))
 data$total_co2e <-data$emission_co2e_subsector_total_trww+data$emission_co2e_subsector_total_wali+data$emission_co2e_subsector_total_waso
 data$Future_ID <- 0
 data$X<-NULL
-#data_old<-data
-#data[is.na(data)] <- 0
-
 
 #how we identify each individual run
 id_vars <-c('nation','time_period','policy','Future_ID')
@@ -130,10 +125,8 @@ for (j in policies)
 }
 
 #cost of Sanitation
-data_tr<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Transformations\)"
-#data_tr<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Transformations\)"
-St<-read.csv(paste0(data_tr,'SanitationTransformation_test3.csv'))
-Exp<-read.csv(paste0(data_tr,'transformations_experiment_new.csv'))
+St<-read.csv(paste0(root,'SanitationTransformation_test3.csv'))
+Exp<-read.csv(paste0(root,'transformations_experiment_new.csv'))
 #create table for each policy
 st_all<-apply(Exp,1,function(x){pivot<-subset(St,TransformationName==x['sanitation']);
                                 pivot$policy<-x['Policy_ID'];
@@ -145,9 +138,7 @@ urban_vars<-subset(colnames(st_all),grepl("urban",colnames(st_all))==TRUE)
 
 
 #merge with population table
-#data_dir<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-data_dir<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-pop_all<-read.csv(paste0(data_dir,"pop_all_future.csv"))
+pop_all<-read.csv(paste0(root,"pop_all_future.csv"))
 pop_all$nation<-tolower(pop_all$nation)
 pop_all$nation<-gsub(" ","_",pop_all$nation)
 st_all<-Reduce(function(...) merge(..., all=T), list(pop_all,st_all))
@@ -236,53 +227,6 @@ for (j in policies)
 
 #less cod and bod in effluent
 #liquid waste
-
-#bod_vars<-
-#c(
-#'qty_trww_tow_in_effluent_bod_treated_aerobic_tonne',
-#'qty_trww_tow_in_effluent_bod_treated_anaerobic_tonne',
-#'qty_trww_tow_in_effluent_bod_treated_latrine_improved_tonne',
-#'qty_trww_tow_in_effluent_bod_treated_latrine_unimproved_tonne',
-#'qty_trww_tow_in_effluent_bod_treated_septic_tonne',
-#'qty_trww_tow_in_effluent_bod_untreated_no_sewerage_tonne',
-#'qty_trww_tow_in_effluent_bod_untreated_with_sewerage_tonne'
-#)
-
-#cod_vars<-
-#c(
-#'qty_trww_tow_in_effluent_cod_treated_aerobic_tonne',
-#'qty_trww_tow_in_effluent_cod_treated_anaerobic_tonne',
-#'qty_trww_tow_in_effluent_cod_treated_latrine_improved_tonne',
-#'qty_trww_tow_in_effluent_cod_treated_latrine_unimproved_tonne',
-#'qty_trww_tow_in_effluent_cod_treated_septic_tonne',
-#'qty_trww_tow_in_effluent_cod_untreated_no_sewerage_tonne',
-#'qty_trww_tow_in_effluent_cod_untreated_with_sewerage_tonne'
-#)
-
-#bod_vars<-
-#c(
-#
-#'qty_trww_bod_treated_aerobic_tonne',
-#'qty_trww_bod_treated_anaerobic_tonne',
-#'qty_trww_bod_treated_latrine_improved_tonne',
-#'qty_trww_bod_treated_latrine_unimproved_tonne',
-#'qty_trww_bod_treated_septic_tonne',
-#'qty_trww_bod_untreated_no_sewerage_tonne',
-#'qty_trww_bod_untreated_with_sewerage_tonne'
-#)
-
-#
-#cod_vars<-
-#c(
-#'qty_trww_cod_treated_septic_tonne',
-#'qty_trww_cod_untreated_no_sewerage_tonne',
-#'qty_trww_cod_untreated_with_sewerage_tonne'
-#)
-
-
-#bod_vars<-subset(colnames(data),grepl("qty_trww_bod_treated_",colnames(data))==TRUE)
-#cod_vars<-subset(colnames(data),grepl("qty_trww_cod_treated_",colnames(data))==TRUE)
-
 bod_vars<-subset(colnames(data),grepl("qty_trww_bod_",colnames(data))==TRUE)
 bod_vars<-c(subset(bod_vars,grepl("aerobic",bod_vars)==TRUE),subset(bod_vars,grepl("septic",bod_vars)==TRUE))
 cod_vars<-subset(colnames(data),grepl("qty_trww_cod_",colnames(data))==TRUE)
@@ -393,9 +337,8 @@ Recycling<-subset(colnames(data),grepl("qty_waso_recycled_",colnames(data))==TRU
 Composting<-subset(colnames(data),grepl("qty_waso_compost_",colnames(data))==TRUE)
 tvars<-c(OpenBurning,OpenDumping,Landfilled,AnaerobicBiogas,Recycling,Composting)
 
-#data_dir<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-data_dir<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-pop_all<-read.csv(paste0(data_dir,"pop_all_future.csv"))
+
+pop_all<-read.csv(paste0(root,"pop_all_future.csv"))
 pop_all$nation<-tolower(pop_all$nation)
 pop_all$nation<-gsub(" ","_",pop_all$nation)
 
@@ -434,11 +377,8 @@ for (j in policies)
 }
 
 #Benefit of improved household sanitation
-#different approach reading input fractions
-data_tr<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Transformations\)"
-#data_tr<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Transformations\)"
-St<-read.csv(paste0(data_tr,'SanitationTransformation_test3.csv'))
-Exp<-read.csv(paste0(data_tr,'transformations_experiment_new.csv'))
+St<-read.csv(paste0(root,'SanitationTransformation_test3.csv'))
+Exp<-read.csv(paste0(root,'transformations_experiment_new.csv'))
 #create table for each policy
 st_all<-apply(Exp,1,function(x){pivot<-subset(St,TransformationName==x['sanitation']);
                                 pivot$policy<-x['Policy_ID'];
@@ -450,9 +390,7 @@ urban_vars<-subset(colnames(st_all),grepl("urban",colnames(st_all))==TRUE)
 
 
 #merge with population table
-#data_dir<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-data_dir<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Data\Population\)"
-pop_all<-read.csv(paste0(data_dir,"pop_all_future.csv"))
+pop_all<-read.csv(paste0(root,"pop_all_future.csv"))
 pop_all$nation<-tolower(pop_all$nation)
 pop_all$nation<-gsub(" ","_",pop_all$nation)
 st_all<-Reduce(function(...) merge(..., all=T), list(pop_all,st_all))
@@ -532,6 +470,4 @@ CostBenefits_all<- Reduce(function(...) merge(..., all=T), list(Benefit_WasteRed
                                                               ))
 
 #write
-dir_out<-r"(C:\Users\L03054557\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Output\)"
-#dir_out<-r"(C:\Users\Usuario\OneDrive\Edmundo-ITESM\3.Proyectos\42. LAC Decarbonization\Git-LAC-Calib\lac_decarbonization\calibration\CircularEconomy\Output\)"
-write.csv(CostBenefits_all,paste0(dir_out,"CostBenefitAll.csv"),row.names=FALSE)
+write.csv(CostBenefits_all,paste0(root,"CostBenefitAll.csv"),row.names=FALSE)

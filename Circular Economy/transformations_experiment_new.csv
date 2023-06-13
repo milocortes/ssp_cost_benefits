@@ -1,0 +1,6 @@
+Policy_ID,waste_reduction,sanitation,solid
+0,waste_reduction_none,liquid_waste_none,waso_none
+1,waste_reduction_full,liquid_waste_none,waso_none
+2,waste_reduction_none,liquid_waste_full_transformation,waso_none
+3,waste_reduction_none,liquid_waste_none,waso_full
+4,waste_reduction_full,liquid_waste_full_transformation,waso_full
