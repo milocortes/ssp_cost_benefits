@@ -8,6 +8,13 @@ MJ_per_l_oil <-30
 
 #=============-----TRANSPORT------------------============
 
+#------------Fuel Switch Maritime
+global_cost<-10^12 #trillion $
+global_mtkm<-500000*10^9 #500,000 billion
+frac_non_h2<-0.55 #fraction that is for ammonia production
+US_maritime_cost_per_mtkm<-global_cost*frac_non_h2/global_mtkm
+lac_maritime_cost_per_mktm<-ssp_cost_converter(US_maritime_cost_per_mtkm, 'USA', 2020, 'LAC_AVERAGE', 2019)
+
 #------------Electrify LDVs-------------
 marginal_upfront_vehicle_cost<-12000 #USD in USA (Baik et al., 2019)
 marginal_annual_maintenance<-330 #USD in USA (AAA, 2019)

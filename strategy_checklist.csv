@@ -1,0 +1,127 @@
+strategy_id,strategy,strategy_code,status,description
+0,Baseline NDP,BASE,IGNORE,Base assumptions to which all transformations are applied
+1001,AGRC: All transformations,AGRC:ALL,IGNORE,All agricultural transformations
+1002,AGRC: Improve crop productivity,AGRC:INC_PRODUCTIVITY,TO DO,Increase crop yield factors by 20%
+1003,AGRC: Improve rice management,AGRC:DEC_CH4_RICE,TO DO,Reduce :math:`\text{CH}_4` emissions from rice production by 45% due to improved management and reduced flooding.
+1004,AGRC: Reduce supply chain losses,AGRC:DEC_LOSSES_SUPPLY_CHAIN,TO DO,Reduce waste food waste in the agricultural (crop) supply chain (pre-consumer)
+1005,FRST: Stop deforestation,FRST:DEC_DEFORESTATION,TO DO,Halt deforestation of primary and secondary forests
+1006,LNDU: Expand conservation agriculture,LNDU:DEC_SOC_LOSS,TO DO," | Decrease soil organic carbon loss through cropland and grassland management. 
+ | 
+ | **Croplands**: Increases :math:`F_{MG}` for ``croplands`` to 1.067 (see V4, Chapter 5, Table 5.5 [2019R] for croplands management factors :math:`F_{MG}` under different management regimes--mean of *No-Till*)
+ | **Grasslands**: Increase :math:`F_{MG}` for ``grasslands`` to 1.157 (see V4, Chapter 6, Table 6.2 [2019R] for grasslands management factors :math:`F_{MG}` under different management regimes--mean of *Improved Grassland*)"
+1007,LNDU: Expand silvopasture,LNDU:INC_SILVOPASTURE,TO DO,"Increase the use of silvopasture; modeled by shifting 30% of pasture (in final time period) to secondary forests over time; livestock carrying capacities increase to meet the change, while pasture fractions of grassland decrease."
+1008,LNDU: Rehabilitate degraded land,LNDU:INC_LAND_REHABILITIATION,TO DO,
+1009,LSMM: Improve manure management for cattle and pigs,LSMM:INC_MANAGEMENT_CATTLE_PIGS,TO DO," | 95% of manure from cattle (dairy and non-dairy) and pigs is treated. The manure treated is sent to the following pathways:
+ |    37.5% to Anaerobic Digestion
+ |    12.5% to Composting
+ |    25.0% to Daily Spread
+ |    12.5% to Deep Bedding
+ |    12.5% to Solid Storage"
+1010,LSMM: Improve manure management for other animals,LSMM:INC_MANAGEMENT_OTHER,TO DO," | 95% of manure from all other animals is treated. The manure treated is sent to the following pathways:
+ |    37.5.% to Composting
+ |    12.5% to Dry Lot
+ |    25.0% to Daily Spread
+ |    25.0% to Solid Storage"
+1011,LSMM: Improve manure management for poultry,LSMM:INC_MANAGEMENT_POULTRY,TO DO," | 95% of manure from poultry (chickens) and pigs is treated. The manure treated is sent to the following pathways:
+ |    100% to Poultry Management"
+1012,LSMM: Increase biogas capture at anaerobic decomposition facilities,LSMM:INC_CAPTURE_BIOGAS,TO DO,85% of Biogas captured at manure treated at Anaerobic Treatment facilities
+1013,LSMM: Manure management bundle,LSMM:BUNDLE_INC_MANAGEMENT,OMIT,All livestock manure management transformations in addition to increased biogas collection
+1014,LVST: All transformations,LVST:ALL,IGNORE,
+1015,LVST: Increase livestock productivity,LVST:INC_PRODUCTIVITY,TO DO,Increase inferred livestock carrying capacity by 20%
+1016,LVST: Reduce enteric fermentation,LVST:DEC_ENTERIC_FERMENTATION,TO DO,Reduce enteric fermentation (20% in buffalo and cattle and 28% in goats and sheep)
+1017,SOIL: Improve fertilizer application,SOIL:DEC_N_APPLIED,TO DO,Decrease total nitrogen applied to soils by 5% through more precise fertilizer use
+1018,SOIL: Improve lime application,SOIL:DEC_LIME_APPLIED,TO DO,Decrease lime applied to soils by 5%
+1019,AF: All AFOLU transformations,AF:ALL,IGNORE,
+2001,TRWW: All wastewater treatment transformations,TRWW:ALL,IGNORE,
+2002,TRWW: Increase biogas capture,TRWW:INC_CAPTURE_BIOGAS,TO DO,
+2003,TRWW: Increase septic compliance,TRWW:INC_COMPLIANCE_SEPTIC,TO DO,
+2004,WALI: All transformations,WALI:ALL,IGNORE,
+2005,WALI: Improved industrial wastewater treatment,WALI:INC_TREATMENT_INDUSTRIAL,TO DO,
+2006,WALI: Improved rural wastewater treatment,WALI:INC_TREATMENT_RURAL,TO DO,
+2007,WALI: Improved urban wastewater treatment,WALI:INC_TREATMENT_URBAN,TO DO,
+2008,WASO: All solid waste,WASO:ALL,IGNORE,
+2009,WASO: Biogas for energy production,WASO:INC_ENERGY_FROM_BIOGAS,IN PROGRESS,
+2010,WASO: Incineration for energy production,WASO:INC_ENERGY_FROM_INCINERATION,IN PROGRESS,
+2011,WASO: Increase biogas capture,WASO:INC_CAPTURE_BIOGAS,IN PROGRESS,
+2012,WASO: Increase composting and biogas,WASO:INC_ANAEROBIC_AND_COMPOST,IN PROGRESS,
+2013,WASO: Increase landfilling,WASO:INC_LANDFILLING,IN PROGRESS,
+2014,WASO: Increase recycling,WASO:INC_RECYCLING,IN PROGRESS,
+2015,WASO: Waste reduction,WASO:DEC_MSW_PER_CAPITA,IN PROGRESS,
+2016,CE: All Circular Economy transformations,CE:ALL,IGNORE,
+3001,CCSQ: Increase direct air capture,CCSQ:INCREASE_CAPTURE,TO DO,Increase Direct Air Capture deployment to 50 MT CO2e by 2050
+3002,CCSQ: Increase direct air capture with renewable energy production,CCSQ:INCREASE_CAPTURE_REP,TO DO,Increase Direct Air Capture deployment to 50 MT CO2e by 2050 + Renewable Energy Production
+3003,ENTC: 95% of electricity is generated by renewables in 2050,ENTC:TARGET_RENEWABLE_ELEC,DONE,
+3004,ENTC: Least cost solution,ENTC:LEAST_COST,DONE,
+3005,ENTC: Reduce transmission losses,ENTC:DEC_LOSSES,DONE,
+3006,ENTC: Reduce transmission losses with renewable energy production,ENTC:DEC_LOSSES_REP,DONE,
+3007,FGTV: All Fugitive Emissions transformations,FGTV:ALL,IGNORE,
+3008,FGTV: All Fugitive Emissions transformations with renewable energy production,FGTV:ALL_REP,IGNORE,
+3009,FGTV: Maximize flaring,FGTV:INC_FLARE,TO DO,
+3010,FGTV: Maximize flaring with renewable energy production,FGTV:INC_FLARE_REP,TO DO,
+3011,FGTV: Minimize leaks,FGTV:DEC_LEAKS,TO DO,
+3012,FGTV: Minimize leaks with renewable energy production,FGTV:DEC_LEAKS_REP,TO DO,
+3013,INEN: All Industrial Energy transformations,INEN:ALL,DONE,
+3014,INEN: All Industrial Energy transformations with renewable energy production,INEN:ALL_REP,DONE,
+3015,INEN: Fuel switch low-temp thermal processes to industrial heat pumps,INEN:FUEL_SWITCH_LO_HEAT,DONE,
+3016,INEN: Fuel switch low-temp thermal processes to industrial heat pumps with renewable energy production,INEN:FUEL_SWITCH_LO_HEAT_REP,DONE,
+3017,INEN: Fuel switch medium and high-temp thermal processes to hydrogen and electricity,INEN:FUEL_SWITCH_HI_HEAT,DONE,
+3018,INEN: Fuel switch medium and high-temp thermal processes to hydrogen and electricity with renewable energy production,INEN:FUEL_SWITCH_HI_HEAT_REP,DONE,
+3019,INEN: Maximize industrial energy efficiency,INEN:INC_EFFICIENCY_ENERGY,DONE,
+3020,INEN: Maximize industrial energy efficiency with renewable energy production,INEN:INC_EFFICIENCY_ENERGY_REP,DONE,
+3021,INEN: Maximize industrial production efficiency,INEN:INC_EFFICIENCY_PRODUCTION,IGNORE,
+3022,INEN: Maximize industrial production efficiency with renewable energy production,INEN:INC_EFFICIENCY_PRODUCTION_REP,IGNORE,
+3023,SCOE: All Stationary Combustion and Other Energy transformations,SCOE:ALL,IGNORE,
+3024,SCOE: All Stationary Combustion and Other Energy transformations with renewable energy production,SCOE:ALL_REP,IGNORE,
+3025,SCOE: Increase appliance efficiency,SCOE:INC_EFFICIENCY_APPLIANCE,DONE,
+3026,SCOE: Increase appliance efficiency with renewable energy production,SCOE:INC_EFFICIENCY_APPLIANCE_REP,DONE,
+3027,SCOE: Reduce end-use demand for heat energy by improving building shell,SOCE:DEC_DEMAND_HEAT,DONE,
+3028,SCOE: Reduce end-use demand for heat energy by improving building shell with renewable energy production,SOCE:DEC_DEMAND_HEAT_REP,DONE,
+3029,"SCOE: Switch to electricity for heat using heat pumps, electric stoves, etc.",SCOE:FUEL_SWITCH_HEAT,DONE,
+3030,"SCOE: Switch to electricity for heat using heat pumps, electric stoves, etc. with renewable energy production",SCOE:FUEL_SWITCH_HEAT_REP,DONE,
+3031,TRNS: All Transportation transformations,TRNS:ALL,IGNORE,
+3032,TRNS: All Transportation transformations with renewable energy production,TRNS:ALL_REP,IGNORE,
+3033,TRNS: Demand management bundle,TRNS:BUNDLE_DEMAND_MANAGEMENT,IGNORE,
+3034,TRNS: Demand management bundle with renewable energy production,TRNS:BUNDLE_DEMAND_MANAGEMENT_REP,IGNORE,
+3035,TRNS: Efficiency bundle,TRNS:BUNDLE_EFFICIENCY,IGNORE,
+3036,TRNS: Efficiency bundle with renewable energy production,TRNS:BUNDLE_EFFICIENCY_REP,IGNORE,
+3037,TRNS: Electrify light duty road transport,TRNS:FUEL_SWITCH_LIGHT_DUTY,DONE,
+3038,TRNS: Electrify light duty road transport with renewable energy production,TRNS:FUEL_SWITCH_LIGHT_DUTY_REP,DONE,
+3039,TRNS: Electrify rail,TRNS:FUEL_SWITCH_RAIL,DONE,
+3040,TRNS: Electrify rail with renewable energy production,TRNS:FUEL_SWITCH_RAIL_REP,DONE,
+3041,TRNS: Fuel switch bundle,TRNS:BUNDLE_FUEL_SWITCH,IGNORE,
+3042,TRNS: Fuel switch bundle with renewable energy production,TRNS:BUNDLE_FUEL_SWITCH_REP,IGNORE,
+3043,TRNS: Fuel switch maritime,TRNS:FUEL_SWITCH_MARITIME,DONE,
+3044,TRNS: Fuel switch maritime with renewable energy production,TRNS:FUEL_SWITCH_MARITIME_REP,DONE,
+3045,TRNS: Fuel switch medium duty road transport,TRNS:FUEL_SWITCH_MEDIUM_DUTY,DONE,
+3046,TRNS: Fuel switch medium duty road transport with renewable energy production,TRNS:FUEL_SWITCH_MEDIUM_DUTY_REP,DONE,
+3047,TRNS: Increase occupancy for private vehicles,TRNS:INC_OCCUPANCY,DONE,
+3048,TRNS: Increase occupancy for private vehicles with renewable energy production,TRNS:INC_OCCUPANCY_REP,DONE,
+3049,TRNS: Increase transportation electricity energy efficiency,TRNS:INC_EFFICIENCY_ELEC,DONE,
+3050,TRNS: Increase transportation electricity energy efficiency with renewable energy production,TRNS:INC_EFFICIENCY_ELEC_REP,DONE,
+3051,TRNS: Increase transportation non-electricity energy efficiency,TRNS:INC_EFFICIENCY_NON_ELEC,DONE,
+3052,TRNS: Increase transportation non-electricity energy efficiency with renewable energy production,TRNS:INC_EFFICIENCY_NON_ELEC_REP,DONE,
+3053,TRNS: Mode shift bundle,TRNS:BUNDLE_MODE_SHIFT,IGNORE,
+3054,TRNS: Mode shift bundle with renewable energy production,TRNS:BUNDLE_MODE_SHIFT_REP,IGNORE,
+3055,TRNS: Mode shift freight,TRNS:MODE_SHIFT_FREIGHT,DONE,
+3056,TRNS: Mode shift freight with renewable energy production,TRNS:MODE_SHIFT_FREIGHT_REP,DONE,
+3057,TRNS: Mode shift passenger vehicles to others,TRNS:MODE_SHIFT_PASSENGER,DONE,
+3058,TRNS: Mode shift passenger vehicles to others with renewable energy production,TRNS:MODE_SHIFT_PASSENGER_REP,DONE,
+3059,TRNS: Mode shift regional passenger travel,TRNS:MODE_SHIFT_REGIONAL,DONE,
+3060,TRNS: Mode shift regional passenger travel with renewable energy production,TRNS:MODE_SHIFT_REGIONAL_REP,DONE,
+3061,TRDE: Reduce demand for transport,TRDE:DEC_DEMAND,OMIT,
+3062,TRDE: Reduce demand for transport with renewable energy production,TRDE:DEC_DEMAND_REP,OMIT,
+3063,EN: Efficiency bundle,EN:BUNDLE_EFFICIENCY,IGNORE,
+3064,EN: Efficiency bundle with renewable energy production,EN:BUNDLE_EFFICIENCY_REP,IGNORE,
+3065,EN: Fuel switch bundle,EN:BUNDLE_FUEL_SWITCH,IGNORE,
+3066,EN: Fuel switch bundle with renewable energy production,EN:BUNDLE_FUEL_SWITCH_REP,IGNORE,
+3067,EN: All Energy transformations,EN:ALL,IGNORE,
+4001,IPPU: Demand management,IPPU:DEC_DEMAND,DONE,
+4002,IPPU: Reduce cement clinker,IPPU:DEC_CLINKER,TO DO,Reduces use of clinker in cement production
+4003,IPPU: Reduce fluorinated gasses bundle,IPPU:BUNDLE_DEC_FGAS,DONE,
+4004,IPPU: Reduce Nitrous Oxide emissions,IPPU:DEC_N2O,DONE,
+4005,IPPU: Reduce other fluorinated compounds,IPPU:DEC_OTHER_FCS,DONE,"Includes SF6, NF3, HCFCs, and others"
+4006,IPPU: Reduce use of HFCs,IPPU:DEC_HFCS,DONE,
+4007,IPPU: Reduce use of PFCs,IPPU:DEC_PFCS,DONE,
+4008,IP: All IP transformations,IP:ALL,IGNORE,
+5001,PFLO: Healthier diets,PFLO:BETTER_DIETS,TO DO,Reduce the fraction of the population eating red meat by 30% (equivalent to reducing total consumption by 30%) and reduce demand for sugar.
+5002,PFLO: Industrial point of capture CCSQ,PFLO:IND_INC_CCS,TO DO,Specifies point-of-capture carbon capture and sequestration in IPPU and INEN

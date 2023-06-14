@@ -190,18 +190,18 @@ for (i in nations){
 
 dm_vars <-c('prod_ippu_cement_tonne', 'prod_ippu_metals_tonne')
 
-dm_cost_per_tonne<-c(-110, -550)
+dm_cost_per_tonne<-c(-110, -550) #keep
 dm_technical_cost_per_tonne<-c(10, 50)
 dm_waste_ben_per_ton<-c(0,390)
 dm_mining_ben_per_ton<-c(0,3)
-dm_air_ben_per_ton<-c(45,0)
+dm_air_ben_per_ton<-c(45,0) #keep
 
 dm_diff_vars<-paste0('dm_avoided_tons_', dm_vars)
 dm_cost_vars<-paste0('dm_cost_USD_', dm_vars)
 dm_cost_vars_technical<-paste0('dm_technical_cost_USD_', dm_vars)
-dm_ben_vars_avoided_waste<-paste0('dm_benefit_avoided_waste_byproducts_USD_', dm_vars)
+dm_ben_vars_avoided_waste<-paste0('dm_benefit_avoided_waste_byproducts_USD_', dm_vars) #keep
 dm_ben_vars_avoided_mining<-paste0('dm_benefit_avoided_mining_USD_', dm_vars)
-dm_ben_vars_avoided_air<-paste0('dm_benefit_avoided_airpollution_USD_', dm_vars)
+dm_ben_vars_avoided_air<-paste0('dm_benefit_avoided_airpollution_USD_', dm_vars) #keep
 
 dm_output_rownames<-c(id_vars, dm_diff_vars,
                       dm_cost_vars,
